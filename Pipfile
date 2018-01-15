@@ -9,6 +9,8 @@ name = "pypi"
 
 python-telegram-bot = "*"
 requests = "*"
+falcon = "*"
+gunicorn = "*"
 
 
 [dev-packages]

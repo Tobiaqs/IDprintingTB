@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "308abfd5659bf7d3c07bce189b3b724522603ea37b9a1a98b4357fe6aca00cc9"
+            "sha256": "7e30b51cfc94961ac0843ccd602a3271fc294bd19c5c3d887dd25b3bc37cf902"
         },
         "host-environment-markers": {
             "implementation_name": "cpython",
@@ -41,11 +41,25 @@
             ],
             "version": "==3.0.4"
         },
+        "falcon": {
+            "hashes": [
+                "sha256:b6d18d17acf25bb321664c357cb64f10c116edd018d80f6a57e24c5dd29ae879",
+                "sha256:248da1b3da59a692094b63af7b758cfe222687e628fda94c8b516a59ce700737"
+            ],
+            "version": "==1.3.0"
+        },
         "future": {
             "hashes": [
                 "sha256:e39ced1ab767b5936646cedba8bcce582398233d6a627067d4c6a454c90cfedb"
             ],
             "version": "==0.16.0"
+        },
+        "gunicorn": {
+            "hashes": [
+                "sha256:75af03c99389535f218cc596c7de74df4763803f7b63eb09d77e92b3956b36c6",
+                "sha256:eee1169f0ca667be05db3351a0960765620dad53f53434262ff8901b68a1b622"
+            ],
+            "version": "==19.7.1"
         },
         "idna": {
             "hashes": [
@@ -53,6 +67,13 @@
                 "sha256:2c6a5de3089009e3da7c5dde64a141dbc8551d5b7f6cf4ed7c2568d0cc520a8f"
             ],
             "version": "==2.6"
+        },
+        "python-mimeparse": {
+            "hashes": [
+                "sha256:a295f03ff20341491bfe4717a39cd0a8cc9afad619ba44b77e86b0ab8a2b8282",
+                "sha256:76e4b03d700a641fd7761d3cd4fdbbdcd787eade1ebfac43f877016328334f78"
+            ],
+            "version": "==1.6.0"
         },
         "python-telegram-bot": {
             "hashes": [
@@ -67,6 +88,13 @@
                 "sha256:9c443e7324ba5b85070c4a818ade28bfabedf16ea10206da1132edaa6dda237e"
             ],
             "version": "==2.18.4"
+        },
+        "six": {
+            "hashes": [
+                "sha256:832dc0e10feb1aa2c68dcc57dbb658f1c7e65b9b61af69048abc87a2db00a0eb",
+                "sha256:70e8a77beed4562e7f14fe23a786b54f6296e34344c23bc42f07b15018ff98e9"
+            ],
+            "version": "==1.11.0"
         },
         "urllib3": {
             "hashes": [
