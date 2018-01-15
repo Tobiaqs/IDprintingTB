@@ -63,7 +63,7 @@ def msg_received(bot, update):
         
         if 'success' in result:
             add_registered_chat(chat_id)
-            update.message.reply_text('Pairing successful! 👍')
+            update.message.reply_text('Linking successful! 👍\nYou will now receive notifications about your orders.')
         else:
             update.message.reply_text('An error occurred. Sorry 🙁\n\n' + result['error'])
         
