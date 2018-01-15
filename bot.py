@@ -167,7 +167,12 @@ class UnpairResource:
             except Unauthorized:
                 pass
 
+class WakeMyDynoResource:
+    def on_get(self, req, resp):
+        resp.media = { 'wakemydyno': 'yes please!' }
+
 api = falcon.API()
 api.add_route('/notify', NotifyResource())
 api.add_route('/is_registered', IsRegisteredResource())
 api.add_route('/unpair', UnpairResource())
+api.add_route('/wakemydyno.txt', WakeMyDynoResource())
