@@ -169,7 +169,8 @@ class UnpairResource:
 
 class WakeMyDynoResource:
     def on_get(self, req, resp):
-        resp.media = { 'wakemydyno': 'yes please!' }
+        resp.content_type = 'text/plain'
+        resp.media = 'hello'
 
 api = falcon.API()
 api.add_route('/notify', NotifyResource())
