@@ -146,6 +146,28 @@ class IsRegisteredResource:
 
         resp.media = { 'result': is_registered_chat(chat_id) }
 
+class UnpairResource:
+    def on_post(self, req, resp):
+        if environ['IDPRINTING_SHARED_SECRET'] != req.media.get('secret'):
+            resp.media = { 'error': 'Secret not correct.', 'errorCode': 1 }
+            return
+        
+        if 'chat_id' not in req.media:
+            resp.media = { 'error': 'chat_id not specified', 'errorCode': 2 }
+            return
+
+        chat_id = int(req.media.get('chat_id'))
+
+        resp.media = { 'success': True }
+
+        if is_registered_chat(chat_id):
+            del_registered_chat(chat_id)
+            try:
+                updater.bot.send_message(chat_id=chat_id, text='You have been unsubscribed from all notifications.')
+            except Unauthorized:
+                pass
+
 api = falcon.API()
 api.add_route('/notify', NotifyResource())
 api.add_route('/is_registered', IsRegisteredResource())
+api.add_route('/unpair', UnpairResource())
