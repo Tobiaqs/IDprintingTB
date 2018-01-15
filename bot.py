@@ -44,10 +44,10 @@ def del_registered_chat(chat_id):
 
 def msg_received(bot, update):
     chat_id = update.message.chat.id
+    pairing_code_raw = update.message.text.replace(' ', '').strip()
     if is_registered_chat(chat_id):
         update.message.reply_text('You are subscribed to the notifications of an ID printing account. To unsubscribe, send /unsub.')
-    elif pairing_code_regex.fullmatch(update.message.text.strip()):
-        pairing_code_raw = update.message.text.strip()
+    elif pairing_code_regex.fullmatch(pairing_code_raw):
         update.message.reply_text('Verifying...')
         r = requests.post(environ['IDPRINTING_ENDPOINT'] + '/api/pair', data = {
             'secret': environ['IDPRINTING_SHARED_SECRET'],
