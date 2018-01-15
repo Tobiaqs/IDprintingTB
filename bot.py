@@ -169,7 +169,7 @@ class UnpairResource:
 
 class WakeMyDynoResource:
     def on_get(self, req, resp):
-        resp.content_type = 'text/plain'
+        resp.content_type = falcon.MEDIA_TEXT
         resp.media = 'hello'
 
 api = falcon.API()
